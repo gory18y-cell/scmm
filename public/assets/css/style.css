@@ -1,0 +1,544 @@
+/**
+ * ==============================================================================
+ * SISTEM SUPPLY CHAIN MANAGEMENT (SCM) INDUSTRI MANUFAKTUR OTOMOTIF
+ * GLOBAL STYLESHEET - TEMA INDUSTRIAL AUTOMOTIVE MODERN
+ * ==============================================================================
+ * Inspirasi: Dribbble & Google Stitch UI (Clean, Robust, High Contrast)
+ * ==============================================================================
+ */
+
+:root {
+    /* Palet Warna Industri Otomotif */
+    --primary: #0F2C59;          /* Deep Industrial Navy */
+    --primary-dark: #0A192F;     /* Midnight Navy */
+    --primary-light: #1E56A0;    /* Steel Blue */
+    --accent: #3B82F6;           /* Automotive Blue Accent */
+    --accent-hover: #2563EB;
+    
+    /* Netral & Canvas */
+    --bg-canvas: #F8FAFC;        /* Slate Light Canvas */
+    --card-surface: #FFFFFF;     /* Pure White Card */
+    --text-main: #0F172A;        /* Dark Slate Heading */
+    --text-body: #334155;        /* Neutral Slate Text */
+    --text-muted: #64748B;       /* Secondary Muted Text */
+    --border-color: #E2E8F0;     /* Crisp Border */
+    --border-focus: #94A3B8;
+
+    /* Aksen Status & Kategori */
+    --success-bg: #DEF7EC;
+    --success-text: #03543F;
+    --warning-bg: #FEF08A;
+    --warning-text: #854D0E;
+    --danger-bg: #FEE2E2;
+    --danger-text: #991B1B;
+    --info-bg: #E0F2FE;
+    --info-text: #0369A1;
+
+    /* Dimensi Layout */
+    --sidebar-width: 270px;
+    --header-height: 68px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+    --shadow-md: 0 4px 12px rgba(15, 44, 89, 0.08);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
+}
+
+/* Reset & Dasar */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-body);
+    line-height: 1.5;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* ==============================================================================
+ * LAYOUT UTAMA (FLEXBOX PERSISTENT SIDEBAR)
+ * ============================================================================== */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* SIDEBAR NAVIGASI */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary-dark);
+    color: #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #071324;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent));
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 18px;
+    margin-right: 12px;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+}
+
+.brand-text h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.brand-text span {
+    font-size: 11px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Menu Navigasi Sidebar */
+.sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 12px;
+}
+
+.nav-section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748B;
+    font-weight: 700;
+    padding: 10px 14px 6px;
+    margin-top: 6px;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 4px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 11px 14px;
+    color: #94A3B8;
+    border-radius: var(--radius-md);
+    font-size: 13.5px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-link svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link:hover svg {
+    transform: translateX(2px);
+}
+
+/* Indikator Menu Aktif */
+.nav-link.active {
+    color: #FFFFFF;
+    background: linear-gradient(90deg, rgba(30, 86, 160, 0.4), rgba(59, 130, 246, 0.15));
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+.nav-link.active svg {
+    color: var(--accent);
+}
+
+.nav-tag {
+    margin-left: auto;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #CBD5E1;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.nav-link.active .nav-tag {
+    background-color: var(--accent);
+    color: #FFFFFF;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #071324;
+    font-size: 12px;
+    color: #64748B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-footer .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #10B981;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* ==============================================================================
+ * AREA KONTEN UTAMA & HEADER
+ * ============================================================================== */
+.main-wrapper {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100vh;
+}
+
+/* HEADER ATAS */
+.top-header {
+    height: var(--header-height);
+    background-color: var(--card-surface);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: var(--radius-sm);
+}
+
+.sidebar-toggle-btn:hover {
+    background-color: var(--bg-canvas);
+}
+
+.header-title-block h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.header-title-block p {
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.system-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-light);
+    background-color: var(--info-bg);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.user-profile-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 8px 4px 4px;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    background-color: #FFFFFF;
+}
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.user-meta {
+    line-height: 1.2;
+    padding-right: 6px;
+}
+
+.user-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.user-role {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* CONTENT CONTAINER */
+.content-area {
+    flex: 1;
+    padding: 28px 30px;
+    background-color: var(--bg-canvas);
+}
+
+/* FOOTER BAR */
+.footer-bar {
+    padding: 16px 30px;
+    background-color: var(--card-surface);
+    border-top: 1px solid var(--border-color);
+    font-size: 12.5px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ==============================================================================
+ * KOMPONEN REUSABLE (CARD, BADGE, GRID, TABLE)
+ * ============================================================================== */
+.card-panel {
+    background: var(--card-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+/* Grid Menu / Dashboard */
+.grid-cols-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.metric-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.metric-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.metric-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Info Alert Box */
+.alert-box {
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.alert-info {
+    background-color: var(--info-bg);
+    border-left: 4px solid var(--accent);
+    color: #0C4A6E;
+}
+
+.alert-success {
+    background-color: var(--success-bg);
+    border-left: 4px solid #10B981;
+    color: var(--success-text);
+}
+
+/* Overlay Backdrop untuk Sidebar Mobile */
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 95;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ==============================================================================
+ * MEDIA QUERIES (RESPONSIF MOBILE & TABLET)
+ * ============================================================================== */
+@media (max-width: 992px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-backdrop.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .main-wrapper {
+        margin-left: 0;
+    }
+
+    .sidebar-toggle-btn {
+        display: inline-flex;
+    }
+
+    .system-badge {
+        display: none;
+    }
+
+    .top-header {
+        padding: 0 18px;
+    }
+
+    .content-area {
+        padding: 20px 18px;
+    }
+
+    .footer-bar {
+        padding: 14px 18px;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
