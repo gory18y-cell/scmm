@@ -34,7 +34,7 @@ $router->get('/', ['HomeController', 'index']);
 $router->get('/dashboard', ['HomeController', 'index']);
 
 // ==============================================================================
-// RUTE MODUL 1: MASTER REKANAN VENDOR LOGAM & MUTU ISO (GORI - 43250583)
+// RUTE MODUL MASTER REKANAN VENDOR LOGAM & MUTU ISO
 // ==============================================================================
 $router->get('/vendor', ['VendorController', 'index']);
 $router->get('/vendor/create', ['VendorController', 'create']);
@@ -46,7 +46,7 @@ $router->post('/vendor/process-verify/{id}', ['VendorController', 'processVerify
 $router->post('/vendor/delete/{id}', ['VendorController', 'delete']);
 
 // ==============================================================================
-// RUTE MODUL 2: PURCHASE ORDER & JADWAL KIRIM (LATIFAH - 43250555)
+// RUTE MODUL PURCHASE ORDER & JADWAL PENGIRIMAN
 // ==============================================================================
 $router->get('/purchase-order', ['PurchaseOrderController', 'index']);
 $router->get('/purchase-order/create', ['PurchaseOrderController', 'create']);
@@ -58,7 +58,7 @@ $router->post('/purchase-order/cancel/{id}', ['PurchaseOrderController', 'cancel
 $router->get('/purchase-order/materials/{vendorId}', ['PurchaseOrderController', 'getMaterialsByVendor']);
 
 // ==============================================================================
-// RUTE MODUL 3: SPK METODE SIMPLE ADDITIVE WEIGHTING (M. HADI PRATAMA)
+// RUTE MODUL SPK METODE SIMPLE ADDITIVE WEIGHTING (SAW)
 // ==============================================================================
 $router->get('/saw-criteria', ['SawController', 'criteria']);
 $router->post('/saw-criteria/store', ['SawController', 'storeCriteria']);

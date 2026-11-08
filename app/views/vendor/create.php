@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: PENDAFTARAN REKANAN VENDOR BARU - MODUL 1 (GORI)
+ * VIEW: PENDAFTARAN REKANAN VENDOR BARU - MASTER DATA
  * ==============================================================================
  */
 ?>

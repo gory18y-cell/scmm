@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * CONTROLLER: VENDOR CONTROLLER - MODUL 1 (GORI)
+ * CONTROLLER: VENDOR CONTROLLER - MASTER REKANAN LOGAM
  * ==============================================================================
  * Menangani alur CRUD Rekanan Vendor Logam & Akreditasi Mutu ISO
  * lengkap dengan validasi server-side, CSRF protection, flash messages,
@@ -30,7 +30,7 @@ class VendorController extends Controller {
 
         $data = [
             'pageTitle'    => 'Master Rekanan Vendor Logam',
-            'pageSubTitle' => 'Modul 1 (Gori - 43250583): Akreditasi Mutu ISO / IATF 16949 & Verifikasi Rekanan',
+            'pageSubTitle' => 'Akreditasi Mutu ISO / IATF 16949 & Verifikasi Rekanan Pemasok',
             'activeMenu'   => 'vendor',
             'vendors'      => $vendors,
             'authUser'     => $authUser,

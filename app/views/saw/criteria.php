@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: KRITERIA PEMBOBOTAN SPK SAW - MODUL 3 (M. HADI PRATAMA)
+ * VIEW: KRITERIA PEMBOBOTAN SPK SAW - PENILAIAN SUPPLIER
  * ==============================================================================
  * Mengelola kriteria keputusan, bobot persentase, atribut Benefit/Cost,
  * serta validasi akumulasi bobot 100.00% untuk komputasi SAW.
@@ -35,7 +35,7 @@ $canEdit = in_array($userRole, ['Admin', 'QC_Auditor'], true);
                 <span>⚖️</span> <?= htmlspecialchars($pageTitle ?? 'Kriteria Pembobotan SPK SAW', ENT_QUOTES, 'UTF-8') ?>
             </div>
             <div class="card-subtitle" style="margin-bottom: 0;">
-                Penanggung Jawab: <strong>M. Hadi Pratama</strong> | Atribut Benefit/Cost & Pengawasan Konsistensi Bobot
+                Manajemen Bobot Kriteria Penilaian, Penetapan Atribut Benefit/Cost & Konsistensi Normalisasi
             </div>
         </div>
         <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">

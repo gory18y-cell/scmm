@@ -1,9 +1,8 @@
 <?php
 /**
  * ==============================================================================
- * CONTROLLER: SPK METODE SIMPLE ADDITIVE WEIGHTING (SAW) - MODUL 3
+ * CONTROLLER: SPK METODE SIMPLE ADDITIVE WEIGHTING (SAW)
  * ==============================================================================
- * Penanggung Jawab: M. Hadi Pratama
  * Menangani CRUD kriteria, validasi bobot 100%, input nilai matriks evaluasi,
  * komputasi normalisasi benefit/cost, dan pemeringkatan supplier terbaik.
  * ==============================================================================
@@ -44,7 +43,7 @@ class SawController extends Controller {
 
         $data = [
             'pageTitle'    => 'Kriteria Pembobotan SPK SAW',
-            'pageSubTitle' => 'Modul 3 (M. Hadi Pratama): Penentuan Atribut Benefit/Cost & Validasi Akumulasi Bobot 100%',
+            'pageSubTitle' => 'Penentuan Atribut Benefit/Cost & Validasi Akumulasi Bobot 100%',
             'activeMenu'   => 'saw-criteria',
             'criteriaList' => $criteriaList,
             'totalWeight'  => $totalWeight,
@@ -232,7 +231,7 @@ class SawController extends Controller {
 
         $data = [
             'pageTitle'       => 'Input Evaluasi Alternatif Supplier',
-            'pageSubTitle'    => 'Modul 3 (M. Hadi Pratama): Matriks Penilaian Alternatif Rekanan Terverifikasi per Periode',
+            'pageSubTitle'    => 'Matriks Penilaian Alternatif Rekanan Terverifikasi per Periode',
             'activeMenu'      => 'saw-evaluation',
             'periods'         => $periods,
             'selectedPeriod'  => $selectedPeriod,
@@ -316,7 +315,7 @@ class SawController extends Controller {
 
         $data = [
             'pageTitle'      => 'Hasil Perangkingan Supplier (Metode SAW)',
-            'pageSubTitle'   => 'Modul 3 (M. Hadi Pratama): Matriks Keputusan, Normalisasi Benefit/Cost & Nilai Preferensi',
+            'pageSubTitle'   => 'Matriks Keputusan, Normalisasi Benefit/Cost & Nilai Preferensi Prioritas Pengadaan',
             'activeMenu'     => 'saw-ranking',
             'periods'        => $periods,
             'selectedPeriod' => $selectedPeriod,

@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: DETAIL DOKUMEN PURCHASE ORDER, PENERIMAAN GUDANG & RIWAYAT STOK - MODUL 2
+ * VIEW: DETAIL DOKUMEN PURCHASE ORDER, PENERIMAAN GUDANG & RIWAYAT STOK - PENGADAAN BAHAN BAKU
  * ==============================================================================
  */
 $userRole    = $_SESSION['user']['role'] ?? ($authUser['role'] ?? null);
@@ -77,7 +77,7 @@ $isReceivingActive = in_array($po['status_po'], ['Dalam Pengiriman', 'Sebagian D
                 <span>📑</span> Dokumen Purchase Order: <?= htmlspecialchars($po['no_po'], ENT_QUOTES, 'UTF-8') ?>
             </div>
             <div class="card-subtitle" style="margin-bottom: 0;">
-                Modul 2 (Latifah Noor Azizah - 43250555): Lembar Faktur Resmi Pengadaan Bahan Logam & Penerimaan Gudang
+                Lembar Faktur Resmi Pengadaan Bahan Logam & Penerimaan Gudang
             </div>
         </div>
         <div style="display: flex; gap: 10px; align-items: center;">

@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Routing static assets (CSS, JS, Fonts, Images)
+    RewriteRule ^scm/assets/(.*)$ public/assets/$1 [L,QSA]
+    RewriteRule ^assets/(.*)$ public/assets/$1 [L,QSA]
+
+    # 2. Lewatkan jika file atau folder fisik memang ada
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 3. Arahkan semua request halaman ke index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+

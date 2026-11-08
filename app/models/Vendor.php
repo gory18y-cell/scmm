@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * MODEL: VENDOR (REKANAN LOGAM & MUTU ISO) - MODUL 1 (GORI)
+ * MODEL: VENDOR (REKANAN LOGAM & MUTU ISO) - MASTER DATA
  * ==============================================================================
  * Mengelola operasi basis data untuk entitas rekanan vendor logam otomotif
  * dengan 100% Prepared Statements PDO Strict Mode.

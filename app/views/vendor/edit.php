@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: UBAH DATA UMUM REKANAN VENDOR LOGAM - MODUL 1 (GORI)
+ * VIEW: UBAH DATA UMUM REKANAN VENDOR LOGAM - MASTER DATA
  * ==============================================================================
  */
 ?>

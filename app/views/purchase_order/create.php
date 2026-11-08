@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: FORMULIR PENERBITAN PURCHASE ORDER BARU - MODUL 2 (LATIFAH)
+ * VIEW: FORMULIR PENERBITAN PURCHASE ORDER BARU - PENGADAAN BAHAN BAKU
  * ==============================================================================
  */
 ?>
@@ -22,7 +22,7 @@
                 <span>➕</span> Formulir Penerbitan Purchase Order Baru
             </div>
             <div class="card-subtitle" style="margin-bottom: 0;">
-                Modul 2 (Latifah Noor Azizah - 43250555): Input Transaksi Multi-Item Dinamis, Harga Resmi & Jadwal Kirim
+                Input Transaksi Multi-Item Pengadaan Logam, Harga Resmi & Jadwal Pengiriman
             </div>
         </div>
         <a href="/scm/purchase-order" style="color: var(--text-muted); font-size: 13.5px; font-weight: 600; text-decoration: none;">

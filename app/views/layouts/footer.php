@@ -10,10 +10,10 @@
             <!-- Footer Aplikasi -->
             <footer class="footer-bar">
                 <div>
-                    <strong>STMIK IKMI Cirebon</strong> &copy; <?= date('Y') ?> — Program Studi S1 Sistem Informasi (Kelompok 1)
+                    <strong>SCM Manufaktur Otomotif</strong> &copy; <?= date('Y') ?> — Sistem Pengendalian Rantai Pasok Terpadu
                 </div>
                 <div>
-                    Mata Kuliah: <em>Pemrograman Web Dasar (PHP Native MVC & Keamanan PDO)</em>
+                    Platform Manajemen Pengadaan Material, Evaluasi Mutu Rekanan & SPK SAW
                 </div>
             </footer>
         </div>

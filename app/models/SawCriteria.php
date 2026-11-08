@@ -5,7 +5,7 @@
  * ==============================================================================
  * Mengelola kriteria keputusan, bobot persentase, dan tipe kriteria (Benefit/Cost)
  * Target DB : db_scm_otomotif (Tabel `saw_criteria`)
- * Modul 3   : M. Hadi Pratama
+ * Modul     : SPK Pembobotan Kriteria
  * ==============================================================================
  */
 

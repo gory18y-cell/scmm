@@ -5,7 +5,7 @@
  * ==============================================================================
  * Mengelola penilaian supplier dan eksekusi komputasi Simple Additive Weighting
  * Target DB : db_scm_otomotif (Tabel `saw_evaluations`, `vendors`, `saw_criteria`)
- * Modul 3   : M. Hadi Pratama
+ * Modul     : SPK Evaluasi & Algoritma SAW
  * ==============================================================================
  */
 

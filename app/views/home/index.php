@@ -20,13 +20,13 @@
         Integrasi alur pengadaan material baja/logam dari akreditasi mutu supplier hingga kalkulasi analitik SPK SAW dan penerbitan Purchase Order.
     </div>
 
-    <!-- Grid Distribusi Modul Kelompok 1 -->
+    <!-- Grid Distribusi Modul Sistem -->
     <div class="grid-cols-3">
-        <!-- Modul 1: Gori -->
+        <!-- Modul Master Rekanan -->
         <div class="metric-card" style="border-left-color: #0F2C59;">
             <div class="metric-header">
-                <div class="metric-title">Modul 1: Master Rekanan</div>
-                <span class="metric-badge" style="background: #DEF7EC; color: #03543F;">Gori (43250583)</span>
+                <div class="metric-title">Master Rekanan Logam</div>
+                <span class="metric-badge" style="background: #DEF7EC; color: #03543F;">Vendor & ISO</span>
             </div>
             <div class="metric-value" style="font-size: 16px;">Vendor & Mutu ISO</div>
             <div class="metric-desc">
@@ -37,11 +37,11 @@
             </div>
         </div>
 
-        <!-- Modul 2: Latifah -->
+        <!-- Modul Pengadaan Logam -->
         <div class="metric-card" style="border-left-color: #1E56A0;">
             <div class="metric-header">
-                <div class="metric-title">Modul 2: Pengadaan Logam</div>
-                <span class="metric-badge" style="background: #E0F2FE; color: #0369A1;">Latifah (43250555)</span>
+                <div class="metric-title">Pengadaan Bahan Baku</div>
+                <span class="metric-badge" style="background: #E0F2FE; color: #0369A1;">Purchase Order</span>
             </div>
             <div class="metric-value" style="font-size: 16px;">Purchase Order & Jadwal</div>
             <div class="metric-desc">
@@ -52,13 +52,13 @@
             </div>
         </div>
 
-        <!-- Modul 3: Hadi -->
+        <!-- Modul Keputusan SAW -->
         <div class="metric-card" style="border-left-color: #3B82F6;">
             <div class="metric-header">
-                <div class="metric-title">Modul 3: Keputusan SAW</div>
-                <span class="metric-badge" style="background: #FEF08A; color: #854D0E;">Hadi (43250562)</span>
+                <div class="metric-title">Sistem Keputusan SAW</div>
+                <span class="metric-badge" style="background: #FEF08A; color: #854D0E;">SPK Supplier</span>
             </div>
-            <div class="metric-value" style="font-size: 16px;">SPK Supplier Terbaik</div>
+            <div class="metric-value" style="font-size: 16px;">SPK Rekomendasi Vendor</div>
             <div class="metric-desc">
                 CRUD Kriteria & bobot preferensi (0–100%), matriks normalisasi (R), skor preferensi (V), dan visualisasi ranking bar rekomendasi supplier.
             </div>

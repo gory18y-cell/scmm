@@ -4,9 +4,6 @@
  * SISTEM SUPPLY CHAIN MANAGEMENT (SCM) INDUSTRI MANUFAKTUR OTOMOTIF
  * KELAS KONEKSI DATABASE PDO (STRICT MODE & ANTI SQL INJECTION)
  * ==============================================================================
- * Mata Kuliah : Pemrograman Web Dasar
- * Kelompok    : 1 (Gori, Latifah Noor Azizah, M. Hadi Pratama)
- * ==============================================================================
  */
 
 class Database {

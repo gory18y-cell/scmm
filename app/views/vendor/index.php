@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: DAFTAR MASTER REKANAN VENDOR LOGAM - MODUL 1 (GORI)
+ * VIEW: DAFTAR MASTER REKANAN VENDOR LOGAM - MASTER DATA
  * ==============================================================================
  */
 $userRole  = $_SESSION['user']['role'] ?? ($authUser['role'] ?? null);

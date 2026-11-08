@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: INPUT MATRIKS EVALUASI SPK SAW - MODUL 3 (M. HADI PRATAMA)
+ * VIEW: INPUT MATRIKS EVALUASI SPK SAW - PENILAIAN REKANAN
  * ==============================================================================
  * Matriks penilaian alternatif vendor terverifikasi per kriteria keputusan.
  * Hanya vendor dengan status 'Terverifikasi' yang diizinkan dinilai.
@@ -35,7 +35,7 @@ $canEdit = in_array($userRole, ['Admin', 'QC_Auditor'], true);
                 <span>📝</span> <?= htmlspecialchars($pageTitle ?? 'Input Evaluasi Alternatif Supplier', ENT_QUOTES, 'UTF-8') ?>
             </div>
             <div class="card-subtitle" style="margin-bottom: 0;">
-                Penanggung Jawab: <strong>M. Hadi Pratama</strong> | Matriks Penilaian Rekanan Terverifikasi per Periode
+                Matriks Penilaian Mutu Rekanan Terverifikasi per Periode Audit
             </div>
         </div>
 

@@ -3,9 +3,8 @@
  * ==============================================================================
  * MODEL: PURCHASE_ORDER (HEADER PURCHASE ORDER & JADWAL LOGISTIK)
  * ==============================================================================
- * Mata Kuliah : Pemrograman Web Dasar (PHP Native MVC, OOP, PDO Security)
  * Target DB   : db_scm_otomotif (Tabel `purchase_orders`)
- * Modul 2     : Latifah Noor Azizah (43250555)
+ * Modul       : Pengadaan Bahan Baku & Logistik
  * ==============================================================================
  */
 

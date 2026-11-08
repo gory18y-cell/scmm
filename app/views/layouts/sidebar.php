@@ -30,12 +30,12 @@ $currentRole = $_SESSION['user']['role'] ?? ($authUser['role'] ?? null);
                 </a>
             </li>
 
-            <!-- 2. Master Vendor (Modul 1: Gori) -->
+            <!-- 2. Master Vendor -->
             <li class="nav-item">
                 <a href="/scm/vendor" class="nav-link <?= ($activeMenu === 'vendor') ? 'active' : '' ?>">
                     <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                     <span>Master Vendor</span>
-                    <span class="nav-tag"><?= ($currentRole === 'QC_Auditor') ? 'Audit ISO' : (($currentRole === 'Purchasing') ? 'Katalog' : 'Modul 1') ?></span>
+                    <span class="nav-tag"><?= ($currentRole === 'QC_Auditor') ? 'Audit ISO' : (($currentRole === 'Purchasing') ? 'Katalog' : 'Vendor Logam') ?></span>
                 </a>
             </li>
 
@@ -47,13 +47,13 @@ $currentRole = $_SESSION['user']['role'] ?? ($authUser['role'] ?? null);
                 </a>
             </li>
 
-            <!-- 4. Purchase Order (Modul 2: Latifah) -->
+            <!-- 4. Purchase Order -->
             <?php if ($currentRole !== 'QC_Auditor'): ?>
                 <li class="nav-item">
                     <a href="/scm/purchase-order" class="nav-link <?= ($activeMenu === 'purchase-order') ? 'active' : '' ?>">
                         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         <span>Purchase Order</span>
-                        <span class="nav-tag"><?= ($currentRole === 'Purchasing') ? 'Pengadaan' : 'Modul 2' ?></span>
+                        <span class="nav-tag">Pengadaan</span>
                     </a>
                 </li>
             <?php else: ?>
@@ -69,25 +69,25 @@ $currentRole = $_SESSION['user']['role'] ?? ($authUser['role'] ?? null);
 
         <div class="nav-section-title">SPK Metode SAW</div>
         <ul class="nav-list">
-            <!-- 5. Kriteria SAW (Modul 3: Hadi) -->
+            <!-- 5. Kriteria SAW -->
             <li class="nav-item">
                 <a href="/scm/saw-criteria" class="nav-link <?= ($activeMenu === 'saw-criteria') ? 'active' : '' ?>">
                     <svg viewBox="0 0 24 24"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
                     <span>Kriteria SAW</span>
-                    <span class="nav-tag"><?= ($currentRole === 'QC_Auditor') ? 'Audit Bobot' : (($currentRole === 'Purchasing') ? 'Lihat' : 'Modul 3') ?></span>
+                    <span class="nav-tag"><?= ($currentRole === 'QC_Auditor') ? 'Audit Bobot' : 'Kriteria' ?></span>
                 </a>
             </li>
 
-            <!-- 6. Evaluasi Supplier (Modul 3: Hadi) -->
+            <!-- 6. Evaluasi Supplier -->
             <li class="nav-item">
                 <a href="/scm/saw-evaluation" class="nav-link <?= ($activeMenu === 'saw-evaluation') ? 'active' : '' ?>">
                     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                     <span>Evaluasi Supplier</span>
-                    <span class="nav-tag"><?= ($currentRole === 'QC_Auditor') ? 'Input Mutu' : (($currentRole === 'Purchasing') ? 'Lihat' : 'Modul 3') ?></span>
+                    <span class="nav-tag"><?= ($currentRole === 'QC_Auditor') ? 'Input Mutu' : 'Evaluasi' ?></span>
                 </a>
             </li>
 
-            <!-- 7. Hasil Perangkingan (Modul 3: Hadi) -->
+            <!-- 7. Hasil Perangkingan -->
             <li class="nav-item">
                 <a href="/scm/saw-ranking" class="nav-link <?= ($activeMenu === 'saw-ranking') ? 'active' : '' ?>">
                     <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>

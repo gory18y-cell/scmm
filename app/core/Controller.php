@@ -3,8 +3,8 @@
  * ==============================================================================
  * BASE CONTROLLER - SISTEM SUPPLY CHAIN MANAGEMENT (SCM)
  * ==============================================================================
- * Mata Kuliah : Pemrograman Web Dasar (PHP Native MVC & OOP)
- * Kelompok    : 1
+ * Controller dasar yang mewarisi fungsi render tampilan, pengecekan RBAC,
+ * dan manajemen otorisasi pengguna.
  * ==============================================================================
  */
 

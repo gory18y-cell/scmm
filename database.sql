@@ -1,21 +1,19 @@
 -- ==============================================================================
 -- SISTEM SUPPLY CHAIN MANAGEMENT (SCM) & PENILAIAN SUPPLIER LOGAM OTOMOTIF
--- SKEMA BASIS DATA UTAMA (MYSQL / MARIADB XAMPP COMPATIBLE)
+-- SKEMA BASIS DATA UTAMA (MYSQL / MARIADB)
 -- ==============================================================================
--- Mata Kuliah : Pemrograman Web Dasar (PHP Native MVC, OOP, PDO Security)
--- Institusi   : STMIK IKMI Cirebon
--- Kelompok    : 1 (Gori, Latifah Noor Azizah, M. Hadi Pratama)
--- Target DB   : db_scm_otomotif
+-- Target DB   : db_scm_otomotif (atau nama database hosting Anda di InfinityFree)
 -- Engine      : InnoDB
 -- Collation   : utf8mb4_unicode_ci
 -- ==============================================================================
 
 -- 1. Inisialisasi Database
-CREATE DATABASE IF NOT EXISTS `db_scm_otomotif`
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
-
-USE `db_scm_otomotif`;
+-- CATATAN HOSTING (InfinityFree/cPanel):
+-- Jangan gunakan CREATE DATABASE / USE di hosting karena dibatasi oleh sistem hosting.
+-- Di phpMyAdmin hosting: Klik nama database Anda di panel kiri terlebih dahulu, lalu Import.
+-- Hapus tanda komentar (uncomment) baris di bawah hanya jika impor di localhost XAMPP baru:
+-- CREATE DATABASE IF NOT EXISTS `db_scm_otomotif` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- USE `db_scm_otomotif`;
 
 -- Nonaktifkan pemeriksaan foreign key sementara untuk memastikan urutan pembuatan aman
 SET FOREIGN_KEY_CHECKS = 0;
@@ -25,6 +23,8 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ==============================================================================
 DROP TABLE IF EXISTS `saw_evaluations`;
 DROP TABLE IF EXISTS `saw_criteria`;
+DROP TABLE IF EXISTS `po_receipt_details`;
+DROP TABLE IF EXISTS `po_receipts`;
 DROP TABLE IF EXISTS `purchase_order_details`;
 DROP TABLE IF EXISTS `purchase_orders`;
 DROP TABLE IF EXISTS `vendor_materials`;

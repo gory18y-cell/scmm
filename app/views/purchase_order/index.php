@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: DAFTAR PURCHASE ORDER (PO) & JADWAL KIRIM - MODUL 2 (LATIFAH)
+ * VIEW: DAFTAR PURCHASE ORDER (PO) & JADWAL KIRIM - PENGADAAN BAHAN BAKU
  * ==============================================================================
  */
 $userRole    = $_SESSION['user']['role'] ?? ($authUser['role'] ?? null);
@@ -32,7 +32,7 @@ $canCreatePo = in_array($userRole, ['Admin', 'Purchasing'], true);
                 <span>📑</span> Daftar Dokumen Purchase Order & Jadwal Kirim
             </div>
             <div class="card-subtitle" style="margin-bottom: 0;">
-                Penanggung Jawab Modul 2: <strong>Latifah Noor Azizah (43250555)</strong> — Pengadaan Bahan Logam & Jadwal Kedatangan.
+                Manajemen Pengadaan Bahan Logam, Penerbitan PO & Estimasi Jadwal Kedatangan (ETA).
             </div>
         </div>
 

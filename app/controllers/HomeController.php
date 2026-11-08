@@ -23,15 +23,15 @@ class HomeController extends Controller {
     }
 
     /**
-     * Halaman Master Rekanan Vendor (Modul 1: Gori)
+     * Halaman Master Rekanan Vendor
      */
     public function vendor() {
         $data = [
             'pageTitle'    => 'Master Rekanan Vendor Logam',
-            'pageSubTitle' => 'Modul 1 (Gori - 43250583): Akreditasi Mutu ISO / IATF 16949 & Verifikasi Rekanan',
+            'pageSubTitle' => 'Akreditasi Mutu ISO / IATF 16949 & Verifikasi Rekanan',
             'activeMenu'   => 'vendor',
-            'moduleName'   => 'Modul 1: CRUD Master Rekanan Vendor Logam & Akreditasi Mutu ISO',
-            'author'       => 'GORI (NIM: 43250583)',
+            'moduleName'   => 'Master Rekanan Vendor Logam & Akreditasi Mutu ISO',
+            'author'       => 'Divisi Procurement & QA',
             'features'     => [
                 'Form verifikasi legalitas dan sertifikasi mutu ISO/IATF 16949',
                 'Live filter pencarian instan sisi klien dengan Vanilla JS',
@@ -48,10 +48,10 @@ class HomeController extends Controller {
     public function material() {
         $data = [
             'pageTitle'    => 'Katalog Bahan Baku Logam Otomotif',
-            'pageSubTitle' => 'Fitur Pendukung: Spesifikasi Standar Bahan Baku (Baja SPCC, Pipa Baja, Aluminium Alloy)',
+            'pageSubTitle' => 'Spesifikasi Standar Bahan Baku (Baja SPCC, Pipa Baja, Aluminium Alloy)',
             'activeMenu'   => 'material',
             'moduleName'   => 'Katalog Bahan Baku & Pemetaan Pasokan',
-            'author'       => 'Sistem SCM Otomotif',
+            'author'       => 'Divisi Gudang & Logistik',
             'features'     => [
                 'Master spesifikasi teknis pelat baja, batangan, dan aluminium standar industri otomotif (JIS/ASTM)',
                 'Pemetaan pasokan vendor melalui junction table vendor_materials',
@@ -63,15 +63,15 @@ class HomeController extends Controller {
     }
 
     /**
-     * Halaman Transaksi Purchase Order & Jadwal Kirim (Modul 2: Latifah)
+     * Halaman Transaksi Purchase Order & Jadwal Kirim
      */
     public function purchaseOrder() {
         $data = [
             'pageTitle'    => 'Pengadaan Bahan Baku (Purchase Order)',
-            'pageSubTitle' => 'Modul 2 (Latifah - 43250555): Transaksi PO Dinamis, Kalkulasi Subtotal & Jadwal Kirim',
+            'pageSubTitle' => 'Transaksi PO Dinamis, Kalkulasi Subtotal & Jadwal Pengiriman',
             'activeMenu'   => 'purchase-order',
-            'moduleName'   => 'Modul 2: CRUD Pengadaan Bahan Baku (Purchase Order) & Jadwal Kirim',
-            'author'       => 'LATIFAH NOOR AZIZAH (NIM: 43250555)',
+            'moduleName'   => 'Pengadaan Bahan Baku (Purchase Order) & Jadwal Kirim',
+            'author'       => 'Divisi Purchasing',
             'features'     => [
                 'Penerbitan dokumen PO dengan nomor otomatis (PO-YYYYMMDD-XXXX)',
                 'Form transaksi dinamis: tambah dan hapus baris item material via Vanilla JS DOM',
@@ -85,15 +85,15 @@ class HomeController extends Controller {
     }
 
     /**
-     * Halaman Manajemen Kriteria Pembobotan SAW (Modul 3: Hadi)
+     * Halaman Manajemen Kriteria Pembobotan SAW
      */
     public function sawCriteria() {
         $data = [
             'pageTitle'    => 'Kriteria Pembobotan SPK SAW',
-            'pageSubTitle' => 'Modul 3 (Hadi - 43250562): Manajemen Bobot Preferensi (0–100%) & Atribut Benefit/Cost',
+            'pageSubTitle' => 'Manajemen Bobot Preferensi (0–100%) & Atribut Benefit/Cost',
             'activeMenu'   => 'saw-criteria',
-            'moduleName'   => 'Modul 3: CRUD Kriteria Pembobotan SPK SAW',
-            'author'       => 'M. HADI PRATAMA (NIM: 43250562)',
+            'moduleName'   => 'Kriteria Pembobotan SPK SAW',
+            'author'       => 'Divisi QC & Audit Supplier',
             'features'     => [
                 'CRUD tolak ukur evaluasi supplier (Harga, Kualitas/Defect Rate, Lead Time, Fleksibilitas)',
                 'Format bobot persentase presisi DECIMAL(5,2) dengan batas 0.00 s/d 100.00%',
@@ -105,15 +105,15 @@ class HomeController extends Controller {
     }
 
     /**
-     * Halaman Input Nilai Evaluasi Supplier (Modul 3: Hadi)
+     * Halaman Input Nilai Evaluasi Supplier
      */
     public function sawEvaluation() {
         $data = [
             'pageTitle'    => 'Evaluasi Kinerja Rekanan Supplier',
-            'pageSubTitle' => 'Modul 3 (Hadi - 43250562): Input Skor Matriks Keputusan Alternatif (X)',
+            'pageSubTitle' => 'Input Skor Matriks Keputusan Alternatif (X)',
             'activeMenu'   => 'saw-evaluation',
             'moduleName'   => 'Input Matriks Evaluasi Alternatif Supplier',
-            'author'       => 'M. HADI PRATAMA (NIM: 43250562)',
+            'author'       => 'Divisi QC & Audit Supplier',
             'features'     => [
                 'Pengisian skor kuantitatif kinerja supplier terhadap setiap kriteria aktif per periode',
                 'Dibatasi hanya untuk vendor yang berstatus "Terverifikasi"',
@@ -125,15 +125,15 @@ class HomeController extends Controller {
     }
 
     /**
-     * Halaman Hasil Normalisasi & Perangkingan Supplier (Modul 3: Hadi)
+     * Halaman Hasil Normalisasi & Perangkingan Supplier
      */
     public function sawRanking() {
         $data = [
             'pageTitle'    => 'Hasil Perangkingan Kelayakan Supplier (SAW)',
-            'pageSubTitle' => 'Modul 3 (Hadi - 43250562): Matriks Normalisasi (R), Skor Preferensi (V) & Ranking Bar',
+            'pageSubTitle' => 'Matriks Normalisasi (R), Skor Preferensi (V) & Ranking Bar',
             'activeMenu'   => 'saw-ranking',
             'moduleName'   => 'Kalkulasi Algoritma SAW & Visualisasi Ranking Bar',
-            'author'       => 'M. HADI PRATAMA (NIM: 43250562)',
+            'author'       => 'Divisi SCM & Strategic Sourcing',
             'features'     => [
                 'Kalkulasi otomatis Matriks Normalisasi (R) berdasarkan formula atribut Benefit dan Cost',
                 'Perhitungan Nilai Preferensi Akhir (Vi) dengan bobot fraksi desimal (w = bobot / 100)',

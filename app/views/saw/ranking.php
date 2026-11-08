@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: HASIL PERANGKINGAN SPK METODE SAW - MODUL 3 (M. HADI PRATAMA)
+ * VIEW: HASIL PERANGKINGAN SPK METODE SAW - KEPUTUSAN SUPPLIER TERBAIK
  * ==============================================================================
  * Menampilkan hasil pemeringkatan alternatif vendor terbaik, rincian
  * matriks keputusan (X), normalisasi (R), dan preferensi (V).
@@ -40,7 +40,7 @@ $normMatrix = $sawResult['norm_matrix'] ?? [];
                 <span>🏆</span> <?= htmlspecialchars($pageTitle ?? 'Hasil Perangkingan Supplier (Metode SAW)', ENT_QUOTES, 'UTF-8') ?>
             </div>
             <div class="card-subtitle" style="margin-bottom: 0;">
-                Penanggung Jawab: <strong>M. Hadi Pratama</strong> | Rekomendasi Pemasok Komponen Logam Otomotif Berbasis SPK SAW
+                Rekomendasi Pemasok Komponen Logam Otomotif Berbasis SPK Simple Additive Weighting (SAW)
             </div>
         </div>
 

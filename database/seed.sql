@@ -7,15 +7,15 @@
 -- Script ini TIDAK menghapus tabel atau data yang sudah ada sebelumnya.
 -- ==============================================================================
 
-USE `db_scm_otomotif`;
+-- USE `db_scm_otomotif`;
 
 -- 1. Akun Pengguna (Users)
--- Password default untuk semua akun uji: password123
+-- Password default untuk semua akun: password123
 -- Hash Bcrypt valid teruji: $2y$10$4Mx/SCNBTCGa.lBNv0Of7.U8TPPnuyyQEOTgKWRBI0TJKqZMa5jyi
 INSERT INTO `users` (`username`, `password`, `nama_lengkap`, `role`) VALUES
 ('admin', '$2y$10$4Mx/SCNBTCGa.lBNv0Of7.U8TPPnuyyQEOTgKWRBI0TJKqZMa5jyi', 'Administrator SCM', 'Admin'),
-('purchasing', '$2y$10$4Mx/SCNBTCGa.lBNv0Of7.U8TPPnuyyQEOTgKWRBI0TJKqZMa5jyi', 'Latifah Noor Azizah', 'Purchasing'),
-('qc_auditor', '$2y$10$4Mx/SCNBTCGa.lBNv0Of7.U8TPPnuyyQEOTgKWRBI0TJKqZMa5jyi', 'M. Hadi Pratama', 'QC_Auditor')
+('purchasing', '$2y$10$4Mx/SCNBTCGa.lBNv0Of7.U8TPPnuyyQEOTgKWRBI0TJKqZMa5jyi', 'Staff Purchasing Logam', 'Purchasing'),
+('qc_auditor', '$2y$10$4Mx/SCNBTCGa.lBNv0Of7.U8TPPnuyyQEOTgKWRBI0TJKqZMa5jyi', 'QC & Auditor Mutu', 'QC_Auditor')
 ON DUPLICATE KEY UPDATE 
     `nama_lengkap` = VALUES(`nama_lengkap`),
     `role` = VALUES(`role`),
@@ -65,10 +65,10 @@ ON DUPLICATE KEY UPDATE
 
 -- 3. Master Katalog Bahan Baku Logam (Materials)
 INSERT INTO `materials` (`kode_material`, `nama_material`, `kategori`, `satuan`, `spesifikasi_teknis`, `stok_gudang`) VALUES
-('MAT-SPCC-01', 'Plat Baja SPCC JIS G3141', 'Logam Lembaran', 'Lembar', 'Tebal 1.2mm x Lebar 1200mm x Panjang 2400mm (Komponen Sasis)', 150.00),
+('MAT-SPCC-01', 'Plat Baja SPCC JIS G3141', 'Plat Baja', 'Lembar', 'Tebal 1.2mm x Lebar 1200mm x Panjang 2400mm (Komponen Sasis)', 150.00),
 ('MAT-SEAM-02', 'Pipa Baja Seamless ASTM A53', 'Pipa Baja', 'Batang', 'Diameter 2 inch, Sch 40, Panjang 6 meter (Sistem Knalpot/Exhaust)', 80.00),
-('MAT-ALUM-03', 'Aluminium Sheet 5052-H32', 'Logam Lembaran', 'Lembar', 'Tebal 2.0mm x Lebar 1220mm x Panjang 2440mm (Panel Pintu/Body)', 65.00),
-('MAT-ROD-04', 'Baja Batangan Round Bar S45C', 'Batangan Logam', 'Batang', 'Diameter 25mm x Panjang 6 meter, Carbon Steel JIS G4051 (Poros/Axle)', 120.00)
+('MAT-ALUM-03', 'Aluminium Sheet 5052-H32', 'Aluminium Alloy', 'Lembar', 'Tebal 2.0mm x Lebar 1220mm x Panjang 2440mm (Panel Pintu/Body)', 65.00),
+('MAT-ROD-04', 'Baja Batangan Round Bar S45C', 'Besi Tempa', 'Batang', 'Diameter 25mm x Panjang 6 meter, Carbon Steel JIS G4051 (Poros/Axle)', 120.00)
 ON DUPLICATE KEY UPDATE 
     `nama_material` = VALUES(`nama_material`),
     `spesifikasi_teknis` = VALUES(`spesifikasi_teknis`);

@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * CONTROLLER: PURCHASE ORDER & JADWAL KIRIM - MODUL 2 (LATIFAH NOOR AZIZAH)
+ * CONTROLLER: PURCHASE ORDER & JADWAL KIRIM - PENGADAAN BAHAN BAKU
  * ==============================================================================
  * Mengendalikan alur penerbitan dokumen PO, validasi server-side,
  * integrasi transaksi multi-item ACID, otorisasi role, dan transisi status PO.
@@ -41,7 +41,7 @@ class PurchaseOrderController extends Controller {
 
         $data = [
             'pageTitle'    => 'Pengadaan Bahan Baku (Purchase Order)',
-            'pageSubTitle' => 'Modul 2 (Latifah Noor Azizah - 43250555): Penerbitan PO Logam, Subtotal Presisi & Jadwal Kirim',
+            'pageSubTitle' => 'Penerbitan PO Logam, Subtotal Presisi, Jadwal Kirim & Penerimaan Gudang',
             'activeMenu'   => 'purchase-order',
             'orders'       => $orders,
             'csrfToken'    => Session::generateCsrfToken(),

@@ -1,7 +1,7 @@
 <?php
 /**
  * ==============================================================================
- * VIEW: VERIFIKASI REKANAN VENDOR & AUDIT MUTU ISO - MODUL 1 (GORI)
+ * VIEW: VERIFIKASI REKANAN VENDOR & AUDIT MUTU ISO - AUDIT MUTU
  * ==============================================================================
  */
 ?>
